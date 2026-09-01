@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Designer Barber Shop — Neutral Bay</title>
+<meta name="description" content="Traditional barbering by Alan in Neutral Bay. 4.9 stars from 230 Google reviews. Skin fades, beard work, hot towel finish. Cuts from $30. Walk-ins welcome — 0461 415 585.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141310">
+<link rel="canonical" href="https://REPLACE-WITH-DOMAIN/">
+
+<!-- Link previews. This page gets shared by text and DM, so a blank
+     preview card is a real loss. Swap the absolute URLs on deploy. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Designer Barber Shop">
+<meta property="og:title" content="The Designer Barber Shop — Neutral Bay">
+<meta property="og:description" content="Traditional barbering by Alan. 4.9 stars from 230 Google reviews. Cuts from $30, walk-ins welcome. Neutral Bay.">
+<meta property="og:url" content="https://REPLACE-WITH-DOMAIN/">
+<meta property="og:image" content="https://REPLACE-WITH-DOMAIN/img/p7.webp">
+<meta property="og:image:alt" content="Inside The Designer Barber Shop, Neutral Bay">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Designer Barber Shop — Neutral Bay">
+<meta name="twitter:description" content="Traditional barbering by Alan. 4.9 from 230 Google reviews. Cuts from $30.">
+<meta name="twitter:image" content="https://REPLACE-WITH-DOMAIN/img/p7.webp">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23141310'/><g transform='rotate(-35 16 16)'><rect x='1' y='-12' width='6' height='56' fill='%23f4f0e7'/><rect x='12' y='-12' width='6' height='56' fill='%238a2f2f'/><rect x='23' y='-12' width='6' height='56' fill='%23c8683a'/></g></svg>">
+
+<!-- ===================================================================
+     THE DESIGNER BARBER SHOP · Neutral Bay
+     Spec build from Alan's public Google Business Profile, 2026-09-01.
+
+     SOURCED, NOT INVENTED
+       Name, address, hours ......... Google Business Profile
+       0461 415 585 ................. "BOOKING" sign in his own window
+       02 9904 5948 ................. his shopfront awning
+       4.9 / 230 reviews ............ Google
+       "from $30" ................... quoted verbatim in a review
+       "Alan" / "Dr Alan" ........... named by customers in reviews
+       "free easy parking nearby" ... quoted verbatim in a review
+       Three review quotes .......... verbatim, attributed
+       All six photos ............... his own Google Business Profile
+
+     STILL TO GET FROM ALAN
+       - Individual service prices (page shows the honest "from $30")
+       - Year established, for an EST. mark
+       - Whether he wants online booking
+     =================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#f4f0e7;
+    --bone:#e7dfd2;
+    --ink:#141310;
+    --ink-2:#1e1c18;
+    --charcoal:#524c44;
+    --oxblood:#8a2f2f;
+    --ember:#c8683a;
+    --rule:rgba(20,19,16,.18);
+    --rule-dk:rgba(244,240,231,.18);
+    --wrap:1300px;
+    --nav-h:64px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    background:var(--parchment);color:var(--ink);
+    font-family:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding-inline:24px}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#443e36;
+  }
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--oxblood);flex:none}
+  .on-dark .eyebrow{color:rgba(244,240,231,.82)}
+
+  /* ---------------- nav ---------------- */
+  .nav{
+    position:fixed;inset:0 0 auto 0;z-index:100;height:var(--nav-h);
+    display:flex;align-items:center;background:transparent;
+    border-bottom:1px solid transparent;
+    transition:background .3s ease,border-color .3s ease;
+  }
+  /* Nav sits over the photo before it goes solid; without a scrim the
+     white type lands on the bright ceiling and disappears. */
+  .nav::before{
+    content:"";position:absolute;inset:0 0 -34px 0;pointer-events:none;
+    background:linear-gradient(to bottom,rgba(20,19,16,.88),rgba(20,19,16,.55) 62%,rgba(20,19,16,0));
+    transition:opacity .3s ease;
+  }
+  .nav.solid::before{opacity:0}
+  .nav.solid{background:rgba(244,240,231,.96);backdrop-filter:blur(12px);border-bottom-color:var(--rule)}
+  .nav-in{
+    position:relative;z-index:1;
+    width:100%;max-width:var(--wrap);margin:0 auto;padding-inline:24px;
+    display:flex;align-items:center;justify-content:space-between;gap:18px;
+  }
+  .mark{display:flex;align-items:baseline;gap:9px;color:var(--parchment);transition:color .3s ease}
+  .nav.solid .mark{color:var(--ink)}
+  .mark b{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:17px;letter-spacing:-.04em;text-transform:uppercase}
+  .mark span{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:.7}
+  .nav-links{display:none;gap:30px}
+  @media(min-width:940px){.nav-links{display:flex}}
+  .nav-links a{
+    font-size:11px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;
+    color:rgba(244,240,231,.85);transition:color .2s;
+  }
+  .nav.solid .nav-links a{color:var(--charcoal)}
+  .nav-links a:hover{color:var(--ember)}
+  .nav.solid .nav-links a:hover{color:var(--oxblood)}
+  .nav-cta{
+    font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+    padding:11px 19px;border:1px solid rgba(244,240,231,.5);color:var(--parchment);
+    transition:.2s;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--parchment);color:var(--ink);border-color:var(--parchment)}
+  .nav.solid .nav-cta{border-color:var(--ink);color:var(--parchment);background:var(--ink)}
+  .nav.solid .nav-cta:hover{background:var(--oxblood);border-color:var(--oxblood)}
+
+  /* ---------------- hero ---------------- */
+  .hero{display:grid;grid-template-columns:1fr;min-height:100svh;background:var(--ink);color:var(--parchment)}
+  @media(min-width:1000px){.hero{grid-template-columns:1.02fr .98fr}}
+  .hero-copy{
+    display:flex;flex-direction:column;justify-content:center;
+    padding:calc(var(--nav-h) + 46px) 24px 46px;width:100%;
+  }
+  @media(min-width:1000px){
+    .hero-copy{padding:var(--nav-h) 62px 0 max(24px,calc((100vw - var(--wrap))/2 + 24px))}
+  }
+  .hero h1{
+    font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:clamp(37px,6.6vw,72px);line-height:.95;letter-spacing:-.042em;
+    margin:22px 0 20px;
+  }
+  .hero h1 i{font-style:normal;color:var(--ember)}
+  .hero-sub{font-size:clamp(15px,1.9vw,17px);color:rgba(244,240,231,.78);max-width:41ch}
+  .stars-row{display:flex;align-items:center;gap:12px;margin:26px 0 30px;flex-wrap:wrap}
+  .stars{color:var(--ember);letter-spacing:2px;font-size:15px}
+  .stars-row b{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:19px;letter-spacing:-.03em}
+  .stars-row em{font-style:normal;font-size:13px;color:rgba(244,240,231,.75)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:11px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    padding:17px 30px;border:1px solid transparent;transition:.2s;cursor:pointer;
+  }
+  .btn-fill{background:var(--parchment);color:var(--ink)}
+  .btn-fill:hover{background:var(--ember);color:#fff}
+  .btn-dark{background:var(--ink);color:var(--parchment)}
+  .btn-dark:hover{background:var(--oxblood)}
+  .dir{margin-top:16px;padding:14px 24px}
+  .btn-out{border-color:rgba(244,240,231,.45);color:var(--parchment)}
+  .btn-out:hover{border-color:var(--parchment);background:rgba(244,240,231,.08)}
+  @media(max-width:479px){.hero-cta .btn{width:100%}}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:32px;padding-top:22px;border-top:1px solid var(--rule-dk)}
+  .hero-facts span{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(244,240,231,.75)}
+  .hero-media{position:relative;min-height:56vw;overflow:hidden}
+  @media(min-width:1000px){.hero-media{min-height:100svh}}
+  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+  .hero-media::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(to bottom,rgba(20,19,16,.6),rgba(20,19,16,0) 38%);
+  }
+  @media(min-width:1000px){
+    .hero-media::after{background:linear-gradient(to right,rgba(20,19,16,.92),rgba(20,19,16,0) 26%)}
+  }
+
+  /* ---------------- marquee ---------------- */
+  .marq{background:var(--ink-2);color:var(--parchment);overflow:hidden;padding:15px 0;border-block:1px solid var(--rule-dk)}
+  .marq-track{display:flex;width:max-content;animation:slide 36s linear infinite}
+  .marq-track span{
+    font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:14px;letter-spacing:-.015em;padding-right:26px;margin-right:26px;
+    display:inline-flex;align-items:center;white-space:nowrap;position:relative;
+  }
+  .marq-track span::after{content:"";position:absolute;right:-3px;top:50%;transform:translateY(-50%);width:6px;height:6px;background:var(--ember)}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------------- sections ---------------- */
+  section{padding-block:clamp(64px,9vw,118px)}
+  .band-bone{background:var(--bone)}
+  .band-ink{background:var(--ink);color:var(--parchment)}
+  .head{margin-bottom:clamp(34px,5vw,56px)}
+  .head h2{
+    font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,4.7vw,52px);line-height:.99;letter-spacing:-.042em;margin-top:16px;
+  }
+  .head p{margin-top:16px;color:var(--charcoal);font-size:16px;max-width:48ch}
+  .band-ink .head p{color:rgba(244,240,231,.78)}
+
+  /* ---------------- about ---------------- */
+  .about{display:grid;gap:clamp(44px,5vw,64px);grid-template-columns:1fr;align-items:center}
+  @media(min-width:900px){.about{grid-template-columns:.92fr 1.08fr}}
+  .about-media{position:relative}
+  .about-media img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .about-badge{
+    position:absolute;right:-12px;bottom:-22px;background:var(--oxblood);color:#fff;
+    padding:18px 22px;text-align:center;max-width:152px;
+  }
+  .about-badge b{display:block;font-family:'Archivo Black',sans-serif;font-weight:400;font-size:34px;line-height:1;letter-spacing:-.04em}
+  .about-badge span{display:block;margin-top:5px;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;line-height:1.4}
+  .about-body p{color:var(--charcoal);font-size:16.5px;margin-bottom:16px;max-width:52ch}
+  .about-body p strong{color:var(--ink);font-weight:700}
+  .stats{display:flex;flex-wrap:wrap;margin-top:30px;border-top:1px solid var(--rule)}
+  .stat{padding:20px 26px 4px 0;border-right:1px solid var(--rule);margin-right:26px}
+  .stat:last-child{border-right:none;margin-right:0}
+  .stat b{display:block;font-family:'Archivo Black',sans-serif;font-weight:400;font-size:clamp(24px,3.4vw,34px);line-height:1;letter-spacing:-.04em}
+  .stat span{display:block;margin-top:7px;font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#443e36}
+
+  /* ---------------- services ---------------- */
+  .svc{border-top:1px solid var(--rule)}
+  .svc-row{
+    display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:baseline;
+    padding:22px 8px 22px 0;border-bottom:1px solid var(--rule);
+    transition:padding-left .25s ease,background .25s ease;
+  }
+  @media(min-width:820px){.svc-row{grid-template-columns:52px 290px 1fr;gap:20px;padding:26px 8px}}
+  .svc-row:hover{background:rgba(20,19,16,.04);padding-left:14px}
+  .svc-n{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--oxblood)}
+  .svc-t{font-size:clamp(19px,2.6vw,25px);font-weight:700;letter-spacing:-.028em;line-height:1.16}
+  .svc-d{grid-column:1/-1;color:var(--charcoal);font-size:15px}
+  @media(min-width:820px){.svc-d{grid-column:auto}}
+  .price-card{
+    margin-top:clamp(34px,5vw,52px);background:var(--ink);color:var(--parchment);
+    padding:clamp(28px,4vw,42px);display:grid;gap:24px;grid-template-columns:1fr;align-items:center;
+  }
+  @media(min-width:820px){.price-card{grid-template-columns:auto 1fr auto;gap:40px}}
+  .price-card b{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:clamp(42px,6.4vw,66px);line-height:.9;letter-spacing:-.05em;white-space:nowrap}
+  .price-card p{color:rgba(244,240,231,.8);font-size:15.5px;max-width:40ch}
+
+  /* ---------------- gallery ---------------- */
+  .gal{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:820px){.gal{grid-template-columns:repeat(12,1fr);grid-auto-rows:152px}}
+  .gal figure{margin:0;overflow:hidden;background:var(--bone)}
+  .gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;transition:transform .7s cubic-bezier(.2,.7,.3,1)}
+  @media(min-width:820px){.gal img{aspect-ratio:auto}}
+  .gal figure:hover img{transform:scale(1.05)}
+  @media(min-width:820px){
+    .f1{grid-column:span 7;grid-row:span 3}
+    .f2{grid-column:span 5;grid-row:span 2}
+    .f3{grid-column:span 5;grid-row:span 1}
+    .f4{grid-column:span 4;grid-row:span 2}
+    .f5{grid-column:span 8;grid-row:span 2}
+  }
+
+  /* ---------------- reviews ---------------- */
+  .rev-top{display:grid;gap:30px;grid-template-columns:1fr;align-items:end;margin-bottom:clamp(34px,5vw,52px)}
+  @media(min-width:880px){.rev-top{grid-template-columns:1fr auto}}
+  .score{display:flex;align-items:flex-end;gap:16px;transition:color .2s}
+  .score:hover .ct{color:var(--ember)}
+  .score .ct{transition:color .2s}
+  .score b{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:clamp(58px,10vw,112px);line-height:.78;letter-spacing:-.055em}
+  .score .st{display:block;color:var(--ember);letter-spacing:3px;font-size:16px;margin-bottom:6px}
+  .score .ct{display:block;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,240,231,.75)}
+  .quotes{display:grid;grid-template-columns:1fr}
+  @media(min-width:900px){.quotes{grid-template-columns:repeat(3,1fr)}}
+  .q{display:flex;flex-direction:column;padding:28px 0;border-top:1px solid var(--rule-dk)}
+  @media(min-width:900px){
+    .q{padding:0 34px;border-top:none;border-left:1px solid var(--rule-dk)}
+    .q:first-child{padding-left:0;border-left:none}
+    .q:last-child{padding-right:0}
+  }
+  .q p{font-size:16.5px;line-height:1.55;color:rgba(244,240,231,.95);margin-bottom:18px}
+  .q cite{margin-top:auto;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:rgba(244,240,231,.7)}
+
+  /* ---------------- visit ---------------- */
+  .visit{display:grid;gap:clamp(38px,5vw,58px);grid-template-columns:1fr}
+  @media(min-width:900px){.visit{grid-template-columns:1fr 1fr}}
+  .hrs{border-top:1px solid var(--rule);margin-top:12px}
+  .hrs-row{display:flex;justify-content:space-between;align-items:baseline;padding:13px 2px;border-bottom:1px solid rgba(20,19,16,.09);font-size:15px}
+  .hrs-row .d{font-weight:600}
+  .hrs-row .t{font-weight:500}
+  .hrs-row.shut .d,.hrs-row.shut .t{color:var(--charcoal)}
+  .hrs-row.today{background:rgba(138,47,47,.08);padding-inline:10px;margin-inline:-10px}
+  .hrs-row.today .d::after{
+    content:"Today";margin-left:10px;font-size:9.5px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--oxblood);vertical-align:2px;
+  }
+  .blk{margin-bottom:30px}
+  .blk .eyebrow{margin-bottom:12px}
+  .addr{display:block;font-size:clamp(19px,2.7vw,24px);font-weight:600;line-height:1.32;letter-spacing:-.022em}
+  .addr:hover{color:var(--oxblood)}
+  .tel{
+    display:block;font-family:'Archivo Black',sans-serif;font-weight:400;
+    font-size:clamp(24px,3.8vw,34px);letter-spacing:-.045em;margin-bottom:6px;
+  }
+  .tel:hover{color:var(--oxblood)}
+  .tel.alt{font-family:'Archivo',sans-serif;font-weight:600;font-size:clamp(18px,2.6vw,22px);letter-spacing:-.02em}
+  .tel-note{font-size:14px;color:var(--charcoal);margin-top:10px}
+  .shopfront img{width:100%;aspect-ratio:16/10;object-fit:cover;margin-top:4px}
+
+  /* ---------------- footer ---------------- */
+  footer{background:var(--ink);color:var(--parchment);padding:clamp(48px,7vw,78px) 0 30px}
+  .fbig{
+    font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:clamp(30px,7.8vw,92px);line-height:.9;letter-spacing:-.05em;
+    padding-bottom:clamp(26px,4vw,42px);border-bottom:1px solid var(--rule-dk);
+  }
+  .fcols{display:grid;gap:28px;grid-template-columns:1fr;padding-top:32px}
+  @media(min-width:700px){.fcols{grid-template-columns:repeat(3,1fr)}}
+  .fcols .eyebrow{margin-bottom:12px}
+  .fcols p,.fcols a{font-size:14.5px;color:rgba(244,240,231,.86);display:block}
+  .fcols a:hover{color:var(--ember)}
+  .fine{margin-top:38px;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:rgba(244,240,231,.6)}
+
+  /* ---------------- mobile call bar ---------------- */
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:95;display:flex}
+  .callbar a{flex:1;padding:16px 8px;text-align:center;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+  .callbar .c1{background:var(--oxblood);color:#fff}
+  .callbar .c2{background:var(--ink);color:var(--parchment);border-left:1px solid rgba(244,240,231,.18)}
+  @media(min-width:820px){.callbar{display:none}}
+  @media(max-width:819px){body{padding-bottom:51px}}
+
+  /* ---------------- focus ---------------- */
+  :focus-visible{outline:3px solid var(--ember);outline-offset:3px;border-radius:1px}
+  .on-dark :focus-visible,.band-ink :focus-visible{outline-color:var(--ember)}
+  .skip{
+    position:absolute;left:12px;top:-60px;z-index:200;
+    background:var(--ink);color:var(--parchment);padding:12px 20px;
+    font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    transition:top .2s ease;
+  }
+  .skip:focus{top:12px}
+  /* fixed nav would otherwise cover an anchored heading */
+  section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
+
+  /* ---------------- reveal ---------------- */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+  .rv.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .rv{opacity:1;transform:none;transition:none}
+    .marq-track{animation:none}
+    .gal figure:hover img{transform:none}
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HairSalon",
+  "name":"The Designer Barber Shop",
+  "description":"Traditional barbering by Alan in Neutral Bay. Skin fades, scissor cuts, beard shaping and hot towel finish.",
+  "image":"https://REPLACE-WITH-DOMAIN/img/p7.webp",
+  "url":"https://REPLACE-WITH-DOMAIN/",
+  "telephone":"+61461415585",
+  "priceRange":"$$",
+  "currenciesAccepted":"AUD",
+  "paymentAccepted":"Cash, Credit Card",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Shop 1, 3-7 Grosvenor Street",
+    "addressLocality":"Neutral Bay",
+    "addressRegion":"NSW",
+    "postalCode":"2089",
+    "addressCountry":"AU"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":-33.8297568,"longitude":151.2199921},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"17:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"09:00","closes":"16:00"}
+  ],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"230"},
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Haircut"},"priceSpecification":{"@type":"PriceSpecification","minPrice":"30","priceCurrency":"AUD"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Skin Fade"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Hair & Beard"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Beard Trim"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Kids Cut"}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#about">Skip to content</a>
+<nav class="nav" id="nav" aria-label="Primary">
+  <div class="nav-in">
+    <a href="#top" class="mark"><b>The Designer</b><span>Barber Shop</span></a>
+    <div class="nav-links">
+      <a href="#about">The Barber</a>
+      <a href="#services">Services</a>
+      <a href="#shop">The Shop</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a href="tel:0461415585" class="nav-cta">0461 415 585</a>
+  </div>
+</nav>
+
+<header class="hero on-dark" id="top">
+  <div class="hero-copy">
+    <span class="eyebrow">Neutral Bay · Sydney</span>
+    <h1>A cut worth<br>coming <i>back</i> for.</h1>
+    <p class="hero-sub">Traditional barbering by Alan. Skin fades, scissor work, beard shaping and a hot towel finish. No rushing, no upselling.</p>
+    <div class="stars-row">
+      <span class="stars">★★★★★</span>
+      <b>4.9</b>
+      <em>230 Google reviews</em>
+    </div>
+    <div class="hero-cta">
+      <a href="tel:0461415585" class="btn btn-fill">Call the shop</a>
+      <a href="#visit" class="btn btn-out">Hours &amp; address</a>
+    </div>
+    <div class="hero-facts">
+      <span>Walk-ins welcome</span>
+      <span>Free parking nearby</span>
+      <span>Open six days</span>
+    </div>
+  </div>
+  <div class="hero-media">
+    <img src="img/p7.webp" width="1400" height="1050" fetchpriority="high" decoding="async" alt="Inside The Designer Barber Shop — vintage chairs, timber fittings and oxblood leather Chesterfields">
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true">
+  <div class="marq-track">
+    <span>Skin Fades</span><span>Beard Shaping</span><span>Hot Towel Finish</span><span>Scissor Cuts</span><span>Kids Cuts</span><span>Walk-Ins Welcome</span>
+    <span>Skin Fades</span><span>Beard Shaping</span><span>Hot Towel Finish</span><span>Scissor Cuts</span><span>Kids Cuts</span><span>Walk-Ins Welcome</span>
+  </div>
+</div>
+
+<main>
+<section id="about">
+  <div class="wrap about">
+    <div class="about-media rv">
+      <img src="img/p3.webp" width="1100" height="825" loading="lazy" decoding="async" alt="The timber sign inside the shop, spelled out in combs, scissors and razors">
+      <div class="about-badge"><b>4.9</b><span>From 230 reviews</span></div>
+    </div>
+    <div class="about-body rv">
+      <span class="eyebrow">The Barber</span>
+      <div class="head" style="margin-bottom:26px">
+        <h2>The regulars<br>call him Dr Alan.</h2>
+      </div>
+      <p>One customer bet him a haircut — best cut he'd ever had, or he wouldn't pay. He paid, then left a five star review about it.</p>
+      <p>That's more or less how it goes here. Alan takes his time, gets the shape right, and talks to you like a person rather than a booking slot.</p>
+      <p><strong>Most people who sit in the chair once end up regulars.</strong></p>
+      <div class="stats">
+        <div class="stat"><b>230</b><span>Google reviews</span></div>
+        <div class="stat"><b>4.9</b><span>Average rating</span></div>
+        <div class="stat"><b>6 days</b><span>Open a week</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band-bone" id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">What Alan Does</span>
+      <h2>Hair and beard,<br>done properly.</h2>
+    </div>
+    <div class="svc rv">
+      <div class="svc-row">
+        <span class="svc-n">01</span><span class="svc-t">Haircut</span>
+        <span class="svc-d">Clipper or scissor, shaped to suit your head, finished properly.</span>
+      </div>
+      <div class="svc-row">
+        <span class="svc-n">02</span><span class="svc-t">Skin Fade</span>
+        <span class="svc-d">Tight and blended, no hard lines where there shouldn't be. What he's known for.</span>
+      </div>
+      <div class="svc-row">
+        <span class="svc-n">03</span><span class="svc-t">Hair &amp; Beard</span>
+        <span class="svc-d">The full sit-down. Cut, beard shaped and lined, hot towel to finish.</span>
+      </div>
+      <div class="svc-row">
+        <span class="svc-n">04</span><span class="svc-t">Beard Trim</span>
+        <span class="svc-d">Shaped, edged and tidied up. In and out.</span>
+      </div>
+      <div class="svc-row">
+        <span class="svc-n">05</span><span class="svc-t">Kids Cuts</span>
+        <span class="svc-d">Patient with the little ones. No fuss, no drama.</span>
+      </div>
+    </div>
+    <div class="price-card rv">
+      <b>From $30</b>
+      <p>Cash or card. Walk in any day but Tuesday, or ring ahead and Alan will keep a chair free for you.</p>
+      <a href="tel:0461415585" class="btn btn-fill">Call 0461 415 585</a>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">The Shop</span>
+      <h2>Grosvenor Street,<br>Neutral Bay.</h2>
+      <p>Timber, leather and proper barber chairs. Free easy parking nearby, and the door is open six days a week.</p>
+    </div>
+    <div class="gal rv">
+      <figure class="f1"><img src="img/p2.webp" width="1100" height="825" loading="lazy" decoding="async" alt="Vintage barber chairs and the product wall"></figure>
+      <figure class="f2"><img src="img/p5.webp" width="800" height="1066" loading="lazy" decoding="async" alt="A finished skin fade"></figure>
+      <figure class="f3"><img src="img/p1.webp" width="1000" height="750" loading="lazy" decoding="async" alt="The shopfront on Grosvenor Street"></figure>
+      <figure class="f4"><img src="img/p4.webp" width="1000" height="750" loading="lazy" decoding="async" alt="The shop window, signwritten in white"></figure>
+      <figure class="f5"><img src="img/p6.webp" width="1000" height="750" loading="lazy" decoding="async" alt="The waiting area — two oxblood leather Chesterfields and Alan's hand-made hours board"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band-ink on-dark">
+  <div class="wrap">
+    <div class="rev-top rv">
+      <div class="head" style="margin-bottom:0">
+        <span class="eyebrow">The Regulars</span>
+        <h2>230 reviews.<br>Barely a bad word.</h2>
+      </div>
+      <a class="score" href="https://www.google.com/maps/place/The+Designer+Barber+Shop/data=!4m7!3m6!1s0x6b12af750b086587:0xb3eb00aede20ea05!8m2!3d-33.8297568!4d151.2199921!16s%2Fg%2F11r_qzd5v0" target="_blank" rel="noopener">
+        <b>4.9</b>
+        <div>
+          <span class="st">★★★★★</span>
+          <span class="ct">Read them on Google →</span>
+        </div>
+      </a>
+    </div>
+    <div class="quotes rv">
+      <div class="q">
+        <p>“Some people call him the Doctor Designer Barber. I call him the man who gave me my best haircut ever. Not just the cut itself — the whole experience.”</p>
+        <cite>Zar C · Google</cite>
+      </div>
+      <div class="q">
+        <p>“Alan is a great barber. Glad I found someone who is an expert in what he does. Have been going ever since and consistently getting a great cut.”</p>
+        <cite>Josh · Google</cite>
+      </div>
+      <div class="q">
+        <p>“Good location with free easy parking nearby, and reasonably priced at $30.”</p>
+        <cite>Google review</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Visit</span>
+      <h2>Come in for a cut.</h2>
+    </div>
+    <div class="visit">
+      <div class="rv">
+        <div class="blk">
+          <span class="eyebrow">The Shop</span>
+          <a class="addr" href="https://maps.google.com/?q=Shop+1%2F3-7+Grosvenor+St+Neutral+Bay+NSW+2089" target="_blank" rel="noopener">Shop 1, 3–7 Grosvenor Street<br>Neutral Bay NSW 2089</a>
+          <a class="btn btn-dark dir" href="https://maps.google.com/?q=Shop+1%2F3-7+Grosvenor+St+Neutral+Bay+NSW+2089" target="_blank" rel="noopener">Get directions</a>
+        </div>
+        <div class="blk">
+          <span class="eyebrow">Bookings</span>
+          <a class="tel" href="tel:0461415585">0461 415 585</a>
+          <a class="tel alt" href="tel:0299045948">02 9904 5948</a>
+          <p class="tel-note">Walk-ins welcome. Ring ahead if you're short on time.</p>
+        </div>
+        <div class="shopfront"><img src="img/p8.webp" width="900" height="675" loading="lazy" decoding="async" alt="The entrance to The Designer Barber Shop, off the Grosvenor Street arcade"></div>
+      </div>
+      <div class="rv">
+        <span class="eyebrow">Opening Hours</span>
+        <div class="hrs">
+          <div class="hrs-row" data-day="1"><span class="d">Monday</span><span class="t">9am – 6pm</span></div>
+          <div class="hrs-row shut" data-day="2"><span class="d">Tuesday</span><span class="t">Closed</span></div>
+          <div class="hrs-row" data-day="3"><span class="d">Wednesday</span><span class="t">9am – 6pm</span></div>
+          <div class="hrs-row" data-day="4"><span class="d">Thursday</span><span class="t">9am – 6pm</span></div>
+          <div class="hrs-row" data-day="5"><span class="d">Friday</span><span class="t">9am – 6pm</span></div>
+          <div class="hrs-row" data-day="6"><span class="d">Saturday</span><span class="t">8am – 5pm</span></div>
+          <div class="hrs-row" data-day="0"><span class="d">Sunday</span><span class="t">9am – 4pm</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="on-dark">
+  <div class="wrap">
+    <div class="fbig">The Designer<br>Barber Shop</div>
+    <div class="fcols">
+      <div>
+        <span class="eyebrow">Where</span>
+        <p>Shop 1, 3–7 Grosvenor Street<br>Neutral Bay NSW 2089</p>
+      </div>
+      <div>
+        <span class="eyebrow">Call</span>
+        <a href="tel:0461415585">0461 415 585</a>
+        <a href="tel:0299045948">02 9904 5948</a>
+      </div>
+      <div>
+        <span class="eyebrow">Hours</span>
+        <p>Mon, Wed–Fri 9am – 6pm<br>Sat 8am – 5pm · Sun 9am – 4pm<br>Closed Tuesdays</p>
+      </div>
+    </div>
+    <div class="fine">© <span id="yr">2026</span> The Designer Barber Shop · Neutral Bay</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:0461415585">Call the shop</a>
+  <a class="c2" href="#visit">Hours</a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('solid', window.scrollY > window.innerHeight * 0.62); }
+  onScroll(); addEventListener('scroll', onScroll, {passive:true});
+
+  var td = document.querySelector('.hrs-row[data-day="' + new Date().getDay() + '"]');
+  if (td) td.classList.add('today');
+
+  var els = document.querySelectorAll('.rv');
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -60px 0px', threshold:0.08});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
